@@ -9,7 +9,8 @@ import com.cursoudemy.hrpayroll.model.Worker;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Service @Slf4j
+@Service 
+@Slf4j
 public class PaymentService {
 
     @Autowired

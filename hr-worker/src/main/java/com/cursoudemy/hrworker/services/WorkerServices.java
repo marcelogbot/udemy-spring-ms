@@ -20,6 +20,6 @@ public class WorkerServices {
     }
 
     public Worker findById(Long workerId) {
-        return workerR.findById(workerId).orElseThrow(() -> new IllegalStateException("Worker nao encontrado"));
+        return workerR.findById(workerId).get();
     }
 }
