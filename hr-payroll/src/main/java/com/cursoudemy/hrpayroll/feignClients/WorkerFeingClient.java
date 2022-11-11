@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.cursoudemy.hrpayroll.model.Worker;
 
 @Component
-@FeignClient(name = "hr-worker", path = "/worker")
+@FeignClient(name = "hr-worker", path = "worker")
 public interface WorkerFeingClient {
 
     @GetMapping("/{workerId}")
