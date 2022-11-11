@@ -9,20 +9,18 @@ import com.cursoudemy.hrpayroll.feignClients.WorkerFeingClient;
 import com.cursoudemy.hrpayroll.model.Payment;
 import com.cursoudemy.hrpayroll.model.Worker;
 
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Service 
 @Slf4j
-@RequiredArgsConstructor
 public class PaymentService {
 
     @Autowired
     private WorkerFeingClient workerFeingClient;
 
     @Autowired
-    private final CircuitBreakerFactory circuitBreakerFactory;
-
+    private CircuitBreakerFactory circuitBreakerFactory;
+    
     public Payment getPayment(Long workerId, int days) {
         CircuitBreaker circuitBreaker = circuitBreakerFactory.create("circuitbreaker");
 
