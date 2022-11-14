@@ -23,13 +23,13 @@ public class UserController {
         return ResponseEntity.ok(userR.findById(userId).get());
     }
 
-    @GetMapping("/findbymail")
-    public ResponseEntity<User> searchByEmail(@RequestParam String email) {
+    @GetMapping("/findbyemail")
+    public ResponseEntity<User> findByEmail(@RequestParam String email) {
         return ResponseEntity.ok(userR.findByEmail(email));
     }
 
     @GetMapping("/findbyusername")
-    public ResponseEntity<User> searchByUsername(@RequestParam String username) {
+    public ResponseEntity<User> findByUsername(@RequestParam String username) {
         return ResponseEntity.ok(userR.findByUsername(username));
     }
 

@@ -1,0 +1,39 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch HrPayrollApplication",
+            "request": "launch",
+            "mainClass": "com.cursoudemy.hrpayroll.HrPayrollApplication",
+            "projectName": "hr-payroll"
+        },
+        {
+            "type": "java",
+            "name": "Launch HrOauthApplication",
+            "request": "launch",
+            "mainClass": "com.cursoudemy.hroauth.HrOauthApplication",
+            "projectName": "hr-oauth"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-HrApiGatewayApplication<hr-api-gateway>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cursoudemy.hrapigateway.HrApiGatewayApplication",
+            "projectName": "hr-api-gateway",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=65006 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=hr-api-gateway"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-HrUserApplication<hr-user>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cursoudemy.hruser.HrUserApplication",
+            "projectName": "hr-user",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
