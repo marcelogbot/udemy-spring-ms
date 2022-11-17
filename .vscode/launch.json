@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch HrConfigServerApplication",
+            "request": "launch",
+            "mainClass": "com.cursoudemy.hrconfigserver.HrConfigServerApplication",
+            "projectName": "hr-config-server"
+        },
+        {
+            "type": "java",
+            "name": "Launch HrWorkerApplication",
+            "request": "launch",
+            "mainClass": "com.cursoudemy.hrworker.HrWorkerApplication",
+            "projectName": "hr-worker"
+        },
+        {
+            "type": "java",
             "name": "Launch HrEurekaServerApplication",
             "request": "launch",
             "mainClass": "com.cursoudemy.hreurekaserver.HrEurekaServerApplication",
@@ -12,7 +26,8 @@
             "name": "Launch HrPayrollApplication",
             "request": "launch",
             "mainClass": "com.cursoudemy.hrpayroll.HrPayrollApplication",
-            "projectName": "hr-payroll"
+            "projectName": "hr-payroll",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=55232 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=hr-payroll"
         },
         {
             "type": "java",
