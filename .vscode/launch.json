@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch HrEurekaServerApplication",
+            "request": "launch",
+            "mainClass": "com.cursoudemy.hreurekaserver.HrEurekaServerApplication",
+            "projectName": "hr-eureka-server"
+        },
+        {
+            "type": "java",
             "name": "Launch HrPayrollApplication",
             "request": "launch",
             "mainClass": "com.cursoudemy.hrpayroll.HrPayrollApplication",

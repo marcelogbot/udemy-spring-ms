@@ -12,7 +12,9 @@ import com.cursoudemy.hroauth.model.User;
 @FeignClient(name = "hr-user", path = "user")
 public interface UserFeignClient {
 
-    @GetMapping("/findbymail")
+    @GetMapping("/findbyemail")
     ResponseEntity<User> findByEmail(@RequestParam String email);
     
+    @GetMapping("/findbyusername")
+    ResponseEntity<User> findByUsername(@RequestParam String username);
 }

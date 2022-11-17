@@ -9,28 +9,28 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cursoudemy.hruser.model.User;
-import com.cursoudemy.hruser.repositories.UserRepository;
+import com.cursoudemy.hruser.service.UserService;
 
-@RestController
+@RestController 
 @RequestMapping(path = "user")
 public class UserController {
 
     @Autowired
-    private UserRepository userR;
+    private UserService userS;
 
     @GetMapping("{userId}")
     public ResponseEntity<User> findById(@PathVariable Long userId) {
-        return ResponseEntity.ok(userR.findById(userId).get());
+        return ResponseEntity.ok(userS.findById(userId));
     }
 
     @GetMapping("/findbyemail")
     public ResponseEntity<User> findByEmail(@RequestParam String email) {
-        return ResponseEntity.ok(userR.findByEmail(email));
+        return ResponseEntity.ok(userS.findByEmail(email));
     }
 
     @GetMapping("/findbyusername")
     public ResponseEntity<User> findByUsername(@RequestParam String username) {
-        return ResponseEntity.ok(userR.findByUsername(username));
+        return ResponseEntity.ok(userS.findByUsername(username));
     }
 
     

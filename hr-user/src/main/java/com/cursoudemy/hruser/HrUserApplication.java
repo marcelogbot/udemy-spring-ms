@@ -10,7 +10,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 public class HrUserApplication implements CommandLineRunner {
 
 	// @Autowired
-	// private BCryptPasswordEncoder passwordEnconder;
+    // private PasswordEncoder passwordEncoder;
 
 	public static void main(String[] args) {
 		SpringApplication.run(HrUserApplication.class, args);
@@ -18,7 +18,8 @@ public class HrUserApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		// System.out.println("BRCYPT: "+ passwordEnconder.encode("87654321"));
+		// System.out.println("BRCYPT: "+ passwordEncoder.encode("87654321"));
+		// System.out.println("BRCYPT: "+ passwordEncoder.encode("12345678"));
 	}
 
 }

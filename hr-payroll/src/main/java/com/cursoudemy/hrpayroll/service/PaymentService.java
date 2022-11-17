@@ -35,6 +35,8 @@ public class PaymentService {
     }
 
     public Worker getPaymentAlternative(Long workerId, int days) {
+        // Worker workerTeste = workerFeingClient.findById(workerId).getBody();
+        // log.info("WorkerTest: {}",workerTeste);
         Worker worker = new Worker(workerId,"Brann", 1000.0);
         return worker;
     }
